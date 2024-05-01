@@ -1,0 +1,17 @@
+in javascript , how can I prompt the user for a console input ? 
+ChatGPT
+In JavaScript, you can prompt the user for input using the prompt() function. Here's a basic example:
+
+javascript
+Copy code
+let userInput = prompt("Please enter your name:");
+console.log("Hello, " + userInput + "!");
+When you run this code, it will display a prompt dialog with the message
+ "Please enter your name:". The user can input their name, and when they
+ press OK, the value they entered will be stored in the variable userInput. 
+Then, the script will log a greeting message using the entered name to the console.
+
+Keep in mind that prompt() is typically used in browser environments rather
+ than in Node.js or other server-side JavaScript environments.
+ If you're working in Node.js, you would use different methods 
+for getting user input, such as readline.
