@@ -1,0 +1,14 @@
+Classes
+JavaScript’s prototype system can be interpreted as a somewhat 
+free-form take on abstract data types or classes. A class defines 
+the shape of a type of object—what methods and properties it has.
+ Such an object is called an instance of the class.
+
+Prototypes are useful for defining properties for which all instances
+ of a class share the same value. Properties that differ per instance,
+  such as our rabbits’ type property, need to be stored directly in the objects themselves.
+
+To create an instance of a given class, you have to make an object that 
+derives from the proper prototype, but you also have to make sure it itself
+ has the properties that instances of this class are supposed to have. 
+This is what a constructor function does.
