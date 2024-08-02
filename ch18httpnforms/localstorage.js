@@ -1,0 +1,4 @@
+localStorage.setItem("username", "marijn");
+console.log(localStorage.getItem("username"));
+// → marijn
+localStorage.removeItem("username");

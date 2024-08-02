@@ -1,0 +1,21 @@
+<style>
+    body {
+      height: 200px;
+      background: beige;
+    }
+    .dot {
+      height: 8px; width: 8px;
+      border-radius: 4px; /* rounds corners */
+      background: teal;
+      position: absolute;
+    }
+  </style>
+  <script>
+    window.addEventListener("click", event => {
+      let dot = document.createElement("div");
+      dot.className = "dot";
+      dot.style.left = (event.pageX - 6) + "px";
+      dot.style.top = (event.pageY - 6) + "px";
+      document.body.appendChild(dot);
+    });
+  </script>

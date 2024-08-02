@@ -1,0 +1,26 @@
+<!-- File fields
+File fields were originally designed as a way to upload files 
+from the user’s machine
+ through a form. In modern browsers, they also provide a way to 
+ read such files from JavaScript programs. The field acts as a
+  kind of gatekeeper. The script cannot simply start reading 
+  private files from the user’s computer, but if the user selects
+   a file in such a field, the browser interprets that action to mean 
+   that the script may read the file.
+
+A file field usually looks like a button labeled with something
+ like “choose file” or “browse”, with information about the 
+ chosen file next to it. -->
+
+
+ <input type="file">
+<script>
+  let input = document.querySelector("input");
+  input.addEventListener("change", () => {
+    if (input.files.length > 0) {
+      let file = input.files[0];
+      console.log("You chose", file.name);
+      if (file.type) console.log("It has type", file.type);
+    }
+  });
+</script>

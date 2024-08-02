@@ -1,0 +1,21 @@
+<!-- Reading a file is done by creating a FileReader
+ object, registering a "load" event handler for 
+ it, and calling its readAsText method, giving 
+ it the file we want to read. Once loading finishes,
+  the reader’s result property contains the file’s content.
+
+FileReaders also fire an "error" event when reading the file fails for any reason. The error object itself will end up in the reader’s error property. This interface was designed before promises became part of the language.
+ You could wrap it in a promise like this: -->
+
+
+
+ function readFileText(file) {
+    return new Promise((resolve, reject) => {
+      let reader = new FileReader();
+      reader.addEventListener(
+        "load", () => resolve(reader.result));
+      reader.addEventListener(
+        "error", () => reject(reader.error));
+      reader.readAsText(file);
+    });
+  }

@@ -1,0 +1,29 @@
+Browsers give us several ways to display graphics.
+ The simplest way is to use styles to position and color regular DOM elements. This can get us quite far, as the game in the previous chapter showed. By adding partially transparent background images to the nodes, we can make them look exactly the way we want. It is even possible to rotate or skew nodes with the transform style.
+
+But we’d be using the DOM for something that it wasn’t 
+originally designed for. Some tasks, such as drawing a line between arbitrary points, are extremely awkward to do with regular HTML elements.
+
+There are two alternatives. The first is DOM based but
+ utilizes Scalable Vector Graphics (SVG) rather than HTML. Think of SVG as a document-markup dialect that focuses on shapes rather than text. You can embed an SVG document directly in an HTML document or include it with an <img> tag.
+
+The second alternative is called a canvas. A canvas is a 
+single DOM element that encapsulates a picture. It provides 
+a programming interface for drawing shapes onto the space 
+taken up by the node. The main difference between a canvas 
+and an SVG picture is that in SVG the original description
+ of the shapes is preserved so that they can be moved or 
+ resized at any time. A canvas, on the other hand, converts
+  the shapes to pixels (colored dots on a raster) as soon 
+  as they are drawn and does not remember what these pixels 
+  represent. The only way to move a shape on a canvas is to 
+  clear the canvas (or the part of the canvas around the shape)
+   and redraw it with the shape in a new position.
+
+SVG
+This book won’t go into SVG in detail, but I’ll briefly explain 
+how it works. At the end of the chapter, I’ll come back to the 
+trade-offs that you must consider when deciding which drawing
+ mechanism is appropriate for a given application.
+
+This is an HTML document with a simple SVG picture in it:

@@ -1,0 +1,17 @@
+<!-- 
+Checkboxes and radio buttons
+A checkbox field is a binary toggle. Its value can
+ be extracted or changed through its
+ checked property, which holds a Boolean value. -->
+
+
+<label>
+    <input type="checkbox" id="purple"> Make this page purple
+  </label>
+  <script>
+    let checkbox = document.querySelector("#purple");
+    checkbox.addEventListener("change", () => {
+      document.body.style.background =
+        checkbox.checked ? "mediumpurple" : "";
+    });
+  </script>

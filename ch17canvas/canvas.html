@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <p>Before canvas.</p>
+    <canvas width="120" height="60"></canvas>
+    <p>After canvas.</p>
+    <script>
+      let canvas = document.querySelector("canvas");
+      let context = canvas.getContext("2d");
+      context.fillStyle = "red";
+      context.fillRect(10, 10, 100, 50);
+    </script>
+
+</body>
+</html>

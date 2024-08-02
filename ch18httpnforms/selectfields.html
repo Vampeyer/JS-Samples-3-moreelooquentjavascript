@@ -1,0 +1,57 @@
+<!-- The square brackets in the CSS query given to querySelectorAll are used to match attributes. It selects elements whose name attribute is "color".
+
+Select fields
+Select fields are conceptually similar to radio buttons—they also
+ allow the user to choose from a set of options. But where a radio 
+ button puts the layout of
+ the options under our control, the appearance of a <select> tag is
+     determined by the browser.
+
+Select fields also have a variant more akin to a list
+ of checkboxes rather than radio boxes. When given the multiple
+  attribute, a <select> tag will allow the user to select any number
+     of options, rather than just a single option. Whereas a regular
+      select field is drawn as a drop-down control, which shows the
+       inactive options only when you open it, a field with multiple 
+       enabled shows multiple options at the same time, allowing the
+        user to enable or disable them individually.
+
+Each <option> tag has a value. This value can be defined with a value 
+    attribute. When that is not given, the text inside the option will
+     count as its value. The value property of a <select> element reflects
+         the currently selected option. For a multiple field, though,
+          this property doesn’t mean much, since it will give the value
+          
+          of only one of the currently selected options.
+
+The <option> tags for a <select> field can be accessed as an array-like
+     object through the field’s options property. Each option has a
+      property called selected, which indicates whether that option
+       is currently selected. The property can also be written to
+        select or deselect an option.
+
+This example extracts the selected values from a multiple select 
+field and uses them to compose a binary number from individual bits.
+ Hold ctrl (or command on a Mac) to select multiple options. -->
+
+
+
+ <select multiple>
+    <option value="1">0001</option>
+    <option value="2">0010</option>
+    <option value="4">0100</option>
+    <option value="8">1000</option>
+  </select> = <span id="output">0</span>
+  <script>
+    let select = document.querySelector("select");
+    let output = document.querySelector("#output");
+    select.addEventListener("change", () => {
+      let number = 0;
+      for (let option of Array.from(select.options)) {
+        if (option.selected) {
+          number += Number(option.value);
+        }
+      }
+      output.textContent = number;
+    });
+  </script>

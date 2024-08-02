@@ -1,0 +1,38 @@
+<p>Click this document to activate the handler.</p>
+<script>
+  window.addEventListener("click", () => {
+    console.log("You knocked?");
+  });
+</script>
+
+
+<button>Click me</button>
+<p>No handler here.</p>
+<script>
+  let button = document.querySelector("button");
+  button.addEventListener("click", () => {
+    console.log("Button clicked.");
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+<p>A paragraph with a <button>button</button>.</p>
+<script>
+  let para = document.querySelector("p");
+  let button2 = document.querySelector("button");
+  para.addEventListener("mousedown", () => {
+    console.log("Handler for paragraph.");
+  });
+  button.addEventListener("mousedown", event => {
+    console.log("Handler for button.");
+    if (event.button == 2) event.stopPropagation();
+  });
+</script>

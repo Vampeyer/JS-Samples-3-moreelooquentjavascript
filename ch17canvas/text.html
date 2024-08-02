@@ -1,0 +1,26 @@
+
+<!-- Text
+A 2D canvas drawing context provides the methods fillText and strokeText.
+ The latter can be useful for outlining letters, but usually fillText is
+  what you need. 
+It will fill the outline of the given text with the current fillStyle. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas></canvas>
+<script>
+  let cx = document.querySelector("canvas").getContext("2d");
+  cx.font = "28px Georgia";
+  cx.fillStyle = "fuchsia";
+  cx.fillText("I can draw text, too!", 10, 50);
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Normal HTML here.</p>
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <circle r="50" cx="50" cy="50" fill="red"/>
+
+
+      <rect x="120" y="5" width="90" height="90"
+            stroke="blue" fill="none"/>
+    
+    
+        </svg>
+
+
+
+        <p>Before canvas.</p>
+        <canvas width="120" height="60" style="color: aqua;" >v</canvas>
+        <p>After canvas.</p>
+        <script>
+          let canvas = document.querySelector("canvas");
+          let context = canvas.getContext("2d");
+          context.fillStyle = "red";
+          context.fillRect(10, 10, 100, 50);
+        </script>
+
+
+</body>
+</html>

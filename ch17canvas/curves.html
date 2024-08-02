@@ -1,0 +1,27 @@
+<!-- 
+ Curves
+A path may also contain curved lines. These are unfortunately
+ a bit more involved to draw.
+
+The quadraticCurveTo method draws a curve to a given point. 
+To determine the curvature of the line, the method is given a 
+control point as well as a destination point. Imagine this 
+control point as attracting the line, giving it its curve.
+ The line won’t go through
+ the control point, but its direction at the start and end
+  points will be such that a straight line in that direction 
+  would point toward the control point. The following example
+   illustrates this: -->
+
+
+   <canvas></canvas>
+<script>
+  let cx = document.querySelector("canvas").getContext("2d");
+  cx.beginPath();
+  cx.moveTo(10, 90);
+  // = control=(60, 10) goal=(90, 90)
+  cx.quadraticCurveTo(90, -5, 300, 120);
+  cx.lineTo(90, 10);
+  cx.closePath();
+  cx.stroke();
+</script>

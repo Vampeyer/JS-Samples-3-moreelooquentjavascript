@@ -1,0 +1,32 @@
+<canvas></canvas>
+<script>
+  let cx = document.querySelector("canvas").getContext("2d");
+  cx.beginPath();
+  cx.moveTo(50, 10);
+  cx.lineTo(10, 70);
+  cx.lineTo(90, 70);
+  cx.fill();
+</script>
+
+
+
+
+<canvas id="1"></canvas>
+<script>
+  let cx1 = document.getElementById("1").getContext("2d");
+  cx1.beginPath();
+  cx1.moveTo(50, 10);
+  cx1.lineTo(10, 70);
+  cx1.lineTo(98, 110);
+  cx1.fill();
+</script>
+
+
+<!--This example draws a filled triangle.
+ Note that only two of the triangle’s sides are explicitly drawn.
+ The third, from the lower-right corner back to the top,
+  is implied and wouldn’t be there if you stroked the path.
+
+You could also use the closePath method to explicitly close 
+a path by adding an actual line segment back to the path’s start. 
+This segment is drawn when stroking the path.  -->

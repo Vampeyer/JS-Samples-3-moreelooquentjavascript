@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas></canvas>
+<script>
+  let cx = document.querySelector("canvas").getContext("2d");
+  cx.beginPath();
+  for (let y = 10; y < 100; y += 10) {
+    cx.moveTo(10, y);
+    cx.lineTo(90, y);
+  }
+  cx.stroke();
+</script>
+</body>
+</html>

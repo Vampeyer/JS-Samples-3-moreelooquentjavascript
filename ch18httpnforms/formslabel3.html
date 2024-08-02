@@ -1,0 +1,30 @@
+<!-- The <label> tag associates a piece of document with an input field.
+     Clicking anywhere on the label will activate
+     the field, which focuses it and toggles its value when it is a 
+     checkbox or radio button.
+
+    A radio button is similar to a checkbox, but it’s implicitly linked
+     to other radio buttons with the same name attribute so that only
+      one of them can be active at any time. -->
+
+
+
+
+      <label>
+        <input type="radio" name="color" value="orange"> Orange
+      </label>
+      <label>
+        <input type="radio" name="color" value="lightgreen"> Green
+      </label>
+      <label>
+        <input type="radio" name="color" value="lightblue"> Blue
+      </label>
+      <script>
+        let buttons = document.querySelectorAll("[name=color]");
+        for (let button of Array.from(buttons)) {
+          button.addEventListener("change", () => {
+            document.body.style.background = button.value;
+          });
+        }
+      </script>
+

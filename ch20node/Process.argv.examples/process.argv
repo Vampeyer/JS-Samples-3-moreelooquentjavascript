@@ -1,0 +1,7 @@
+[
+  '/path/to/node',       // Node.js executable
+  '/path/to/script.js',  // Path to the executed script
+  'arg1',                // First argument
+  'arg2',                // Second argument
+
+]

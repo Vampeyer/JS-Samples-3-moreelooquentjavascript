@@ -1,0 +1,31 @@
+<!-- The files property of a file field element is an array-like object
+ (once again, not a real array) containing the files chosen in the
+  field. It is initially empty. The reason there isn’t simply a file
+   property is that file fields also support a multiple attribute,
+    which makes it possible to select multiple files at the same time.
+
+The objects in files have properties such as name (the filename),
+ size (the file’s size in bytes, which are chunks of 8 bits), 
+ and type (the media type of the file, such as text/plain or image/jpeg).
+
+What it does not have is a property that contains the content
+ of the file. Getting at that is a little more involved.
+  Since reading a file from disk can take time, the interface
+   is asynchronous to avoid 
+freezing the window. -->
+
+
+<input type="file" multiple>
+<script>
+  let input = document.querySelector("input");
+  input.addEventListener("change", () => {
+    for (let file of Array.from(input.files)) {
+      let reader = new FileReader();
+      reader.addEventListener("load", () => {
+        console.log("File", file.name, "starts with",
+                    reader.result.slice(0, 2000));
+      });
+      reader.readAsText(file);
+    }
+  });
+</script>

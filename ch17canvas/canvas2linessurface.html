@@ -1,0 +1,41 @@
+<!-- Lines and surfaces
+In the canvas interface, a shape can be filled,
+ meaning its area is given a certain color or pattern,
+  or it can be stroked, which means a line is drawn along its edge.
+ SVG uses the same terminology.
+
+The fillRect method fills a rectangle. It takes first
+ the x- and y-coordinates of the rectangle’s upper-left corner, then its width, and then its height. A similar method called strokeRect draws the outline of a rectangle.
+
+Neither method takes any further parameters. The color
+ of the fill, thickness of the stroke, and so on, are
+  not determined by an argument to the method, as you might
+   reasonably expect, but rather by properties of the context object.
+
+The fillStyle property controls the way shapes are filled.
+ It can be set to a string that specifies a color, using
+  the color notation used by CSS.
+
+The strokeStyle property works similarly but determines the
+ color used for a stroked line. The width of that line is 
+ determined by the lineWidth property,
+  which may contain any positive number. -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas></canvas>
+<script>
+  let cx = document.querySelector("canvas").getContext("2d");
+  cx.strokeStyle = "blue";
+  cx.strokeRect(5, 5, 50, 50);
+  cx.lineWidth = 5;
+  cx.strokeRect(135, 5, 50, 50);
+</script>
+  </body>
+  </html>

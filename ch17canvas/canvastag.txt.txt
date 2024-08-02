@@ -1,0 +1,24 @@
+The canvas element
+Canvas graphics can be drawn onto a <canvas> element. You can give such an element width and height attributes to determine its size in pixels.
+
+A new canvas is empty, meaning it is entirely transparent and thus shows up as empty space in the document.
+
+The <canvas> tag is intended to allow different styles of drawing. To get access to an actual drawing interface, we first need to create a context, an object whose methods provide the drawing interface. There are currently three widely supported drawing styles: "2d" for two-dimensional graphics, "webgl" for three-dimensional graphics through the OpenGL interface, and "webgpu", a more modern and flexible alternative to WebGL.
+
+This book won’t discuss WebGL or WebGPU—we’ll stick to two dimensions. But if you are interested in three-dimensional graphics, I do encourage you to look into WebGPU. It provides a direct interface to graphics hardware and allows you to render even complicated scenes efficiently, using JavaScript.
+
+You create a context with the getContext method on the <canvas> DOM element.
+
+
+
+
+
+<p>Before canvas.</p>
+<canvas width="120" height="60"></canvas>
+<p>After canvas.</p>
+<script>
+  let canvas = document.querySelector("canvas");
+  let context = canvas.getContext("2d");
+  context.fillStyle = "red";
+  context.fillRect(10, 10, 100, 50);
+</script>

@@ -1,0 +1,77 @@
+<!-- A lot of field types use the <input> tag. This tag’s type attribute is used to select the field’s style. These are some commonly used <input> types:
+
+text	A single-line text field
+password	Same as text but hides the text that is typed
+checkbox	An on/off switch
+color	A color
+date	A calendar date
+radio	(Part of) a multiple-choice field
+file	Allows the user to choose a file from their computer
+Form fields do not necessarily have to appear in a <form> tag.
+     You can put them anywhere in a page. Such form-less fields 
+     cannot be submitted (only a form as a whole can), but when 
+     responding to input with JavaScript, we often don’t 
+    want to submit our fields normally anyway. -->
+
+
+
+
+<p><input type="text" value="abc"> (text)</p>
+<p><input type="password" value="abc"> (password)</p>
+<p><input type="checkbox" checked> (checkbox)</p>
+<p><input type="color" value="orange"> (color)</p>
+<p><input type="date" value="2023-10-13"> (date)</p>
+<p><input type="radio" value="A" name="choice">
+   <input type="radio" value="B" name="choice" checked>
+   <input type="radio" value="C" name="choice"> (radio)</p>
+<p><input type="file"> (file)</p>
+
+
+
+
+
+<!-- Multiline text fields have their own tag, <textarea>, 
+    mostly because using an attribute to specify a multiline starting 
+    value would be awkward. The <textarea> tag requires a matching </textarea> closing tag and uses the text 
+between those two, instead of the value attribute, as starting text. -->
+
+
+
+<textarea>
+    one
+    two
+    three
+    </textarea>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Finally, the <select> tag is used to create 
+        a field that allows the
+         user to select from a number of predefined options. -->
+
+
+    <select>
+        <option>Pancakes</option>
+        <option>Pudding</option>
+        <option>Ice cream</option>
+      </select>
